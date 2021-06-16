@@ -6,8 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon ./server.js",
-    "start-dev": "pm2 start ./server.js",
-    "stop-dev": "pm2 kill"
+    "start-prod": "pm2 start ./server.js",
+    "stop-prod": "pm2 kill"
 
   },
   "repository": {
