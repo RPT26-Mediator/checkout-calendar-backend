@@ -17,6 +17,10 @@ const {
   getSizeOfDb
 } = require('./dbms.js')
 
+app.get('/port', (req, res) => {
+  res.send(port)
+})
+
 app.get('/checkoutInformation/:productId', (req, res) => {
   // send new data here
   var id = req.params.productId
