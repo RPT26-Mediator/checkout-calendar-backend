@@ -17,6 +17,10 @@ const {
   getSizeOfDb
 } = require('./dbms.js')
 
+app.get('/', (req, res) => {
+  res.send('this is loading')
+})
+
 app.get('/port', (req, res) => {
   res.send(port)
 })
