@@ -32,7 +32,6 @@ app.get('/checkoutInformation/:productId', (req, res) => {
   .then((data) => {
     data = data[0].dataValues
     data.listingId = data.id
-    console.log('data from get request -> ', data)
     res.send(data)
   })
   .catch((error) => {
@@ -97,7 +96,6 @@ app.delete('/db/:id', (req, res) => {
 app.get('/testDb/', (req, res) => {
   var randomNum = (min, max) => { return Math.floor(Math.random() * (max - min)) + min}
   var id = randomNum(1,10000000)
-  console.log('entering testdb',id )
   getDataFromDbWithId(id)
   .then((data) => {
     console.log('data from get request -> ', data)
